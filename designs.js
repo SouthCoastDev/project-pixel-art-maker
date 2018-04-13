@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const form = document.querySelector('#sizePicker');
     form.addEventListener('submit' , function(event){
         event.preventDefault(); 
-        makeGrid();
+        makeGrid(form);
     });
 
 
@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-function makeGrid() {
-    //alert("width:" + width + " height:" + height);
+function makeGrid(form) {
+
+    //get form values
+    const height = form[0].value;
+    const width = form[1].value;
+    const color = document.getElementById('colorPicker').value;
+    
+    
+
+
+    alert("width:" + width + " height:" + height + " color:" + color);
 }
