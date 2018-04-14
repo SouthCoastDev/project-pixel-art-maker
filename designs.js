@@ -22,6 +22,11 @@ function makeGrid(form , canvas) {
     const height = form[0].value;
     const width = form[1].value;
 
+    if(width > 40 || height > 40){
+        alert("max width and heigth is 40.");
+        return;
+    }
+
     //remove all table cells added. 
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
